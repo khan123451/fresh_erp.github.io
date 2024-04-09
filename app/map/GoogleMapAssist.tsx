@@ -116,7 +116,6 @@ const GoogleMapAssist = () => {
         {freshs.map((fresh, index) => (
             <div>
                 <Marker
-                key={index}
                 position={fresh.location}
                 title={fresh.name}
                 icon={PushpinOutlined}
