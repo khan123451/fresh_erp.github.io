@@ -29,7 +29,7 @@ const GoogleMapAssist = () => {
     const [loadings, setLoadings] = useState<boolean[]>([]);
   
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: 'AIzaSyA58If6U06_aXnV9VFd5guNQKeqE0ugq00',
+    googleMapsApiKey: '%API_KEY%',
     libraries,
   });
 
