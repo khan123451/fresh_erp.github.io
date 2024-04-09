@@ -1,0 +1,11 @@
+.anime-img {
+    flex: 1;
+    height: 100%;
+    width: 100vh;
+    min-height: 100vh;
+    max-width: 100%;
+    background: url('./Fresh.png') no-repeat center center;
+    background-size: cover;
+    animation: fade-in 5s;
+    z-index: 1;
+}

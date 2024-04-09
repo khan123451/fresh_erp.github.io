@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Kim",
+    "role": "CEO",
+    "index": 2
+  },
+  {
+    "name": "Danny",
+    "role": "CFO",
+    "index": 21
+  },
+  {
+    "name": "John",
+    "role": "Product Manager",
+    "index": 11
+  },
+  {
+    "name": "Khan",
+    "role": "Product Manager",
+    "index": 22
+  },
+  {
+    "name": "Korng",
+    "role": "Product Manager",
+    "index": 13
+  },
+  {
+    "name": "JJ",
+    "role": "Marketing Manager",
+    "index": 15
+  },
+  {
+    "name": "Johnny",
+    "role": "Store Manager 1",
+    "index": 16
+  },
+  {
+    "name": "Mark",
+    "role": "Store Manager 2",
+    "index": 17
+  },
+  {
+    "name": "Jack",
+    "role": "Teller",
+    "index": 18
+  },
+  {
+    "name": "Winnie",
+    "role": "Teller",
+    "index": 19
+  },
+  {
+    "name": "Steve",
+    "role": "Teller",
+    "index": 20
+  },
+  {
+    "name": "Wong",
+    "role": "Teller",
+    "index": 30
+  },
+  {
+    "name": "Lee",
+    "role": "Teller",
+    "index": 31
+  },
+  {
+    "name": "Olive",
+    "role": "Teller",
+    "index": 32
+  }
+]

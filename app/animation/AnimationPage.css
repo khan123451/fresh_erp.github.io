@@ -1,0 +1,18 @@
+.animation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 2s forwards;
+  }
+  
+  @keyframes fadeInAnimation {
+    to {
+      opacity: 1;
+    }
+  }
+  
