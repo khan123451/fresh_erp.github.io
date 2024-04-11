@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { GoogleMap, useLoadScript, Marker, LoadScript, DirectionsService, DirectionsRenderer } from '@react-google-maps/api';
+import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
 import {
     PushpinOutlined,
   } from '@ant-design/icons';
 import { Button, Card } from 'antd/lib';
 import FreshPanel1 from './freshPanel1';
 import FreshPanel2 from './freshPanel2';
-import { Label } from '@mui/icons-material';
-import { Position } from 'reactflow';
 
-const libraries = ['places'];
 const mapContainerStyle = {
   width: '80vw',
   height: '100vh',
@@ -35,8 +32,7 @@ const GoogleMapAssist = () => {
     const [selectedStore2, setSelectedStore2] = useState(false);
   
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: '%API_KEY%',
-    libraries,
+    googleMapsApiKey: 'AIzaSyA58If6U06_aXnV9VFd5guNQKeqE0ugq00'
   });
 
   if (loadError) {
@@ -47,11 +43,11 @@ const GoogleMapAssist = () => {
     return <div>Loading maps</div>;
   }
 
-  const onMapLoad = mapInstance => {
+  const onMapLoad = (mapInstance: any) => {
     setMap(mapInstance);
   };
 
-  const calculateDirections = (origin, destination) => {
+  const calculateDirections = (origin: any, destination: any) => {
     const directionsService = new window.google.maps.DirectionsService();
 
     const directionsRequest = {
@@ -59,14 +55,6 @@ const GoogleMapAssist = () => {
       destination,
       travelMode: 'DRIVING',
     };
-
-    directionsService.route(directionsRequest, (result, status) => {
-      if (status === 'OK') {
-        setDirections(result);
-      } else {
-        console.error('Directions request failed:', status);
-      }
-    });
   };
 
   const clickEvent = (index: number) => {
@@ -77,10 +65,10 @@ const GoogleMapAssist = () => {
     }
   }
 
-  const handleLocChange = event => {
+  const handleLocChange = (event: any) => {
     const selectedLocName = event.target.value;
     const fresh = freshs.find(h => h.name === selectedLocName);
-    setSelectedLoc(fresh);
+    // setSelectedLoc(fresh);
   };
 
   const enterLoading = (index: number) => {
@@ -134,7 +122,6 @@ const GoogleMapAssist = () => {
                 key={index}
                 position={fresh.location}
                 title={fresh.name}
-                icon={PushpinOutlined}
                 onClick={()=>index==1?setSelectedStore1(true):setSelectedStore2(true)}
                 label={{
                     text: fresh.name,

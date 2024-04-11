@@ -6,7 +6,6 @@ import DateSchedule from './DateSchedule';
 import NBLineChart from './NBLineChart';
 import DayLineChart from './DayLineChart';
 import { LikeOutlined } from '@ant-design/icons';
-import DDLineChart from './DDLineChart';
 
 const { Content } = Layout;
 
@@ -38,14 +37,9 @@ const Reports = () => {
             </Row>
             <br />
             <Row gutter={16}>
-              <Col span={12}>
+              <Col span={24}>
                 <Card title="Sale Tracking" bordered={false}>
                   <DayLineChart />
-                </Card>
-              </Col>
-              <Col span={12}>
-                <Card title="Daily Deals" bordered={false} >
-                  <DDLineChart />
                 </Card>
               </Col>
             </Row>

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Layout } from 'antd/lib';
 import MenuBar from '../main/menubar';
-import Inventory from './inventory';
+import Inventory from './Inventory';
 const { Sider } = Layout;
 
 const InventoryPage = () => {

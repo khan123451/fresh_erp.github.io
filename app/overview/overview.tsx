@@ -33,7 +33,7 @@ const Overview = () => {
   const add = () => {
     const newActiveKey = `newTab${newTabIndex.current++}`;
     const newPanes = [...items];
-    newPanes.push({ label: 'New Tab', children: 'Content of new Tab', key: newActiveKey });
+    newPanes.push({ label: 'New Tab', key: newActiveKey });
     setItems(newPanes);
     setActiveKey(newActiveKey);
   };

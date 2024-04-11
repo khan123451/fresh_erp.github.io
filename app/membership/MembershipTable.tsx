@@ -5,8 +5,9 @@ import type { TableProps } from 'antd';
 interface DataType {
   key: string;
   name: string;
-  age: number;
-  address: string;
+  contact: string;
+  points: string;
+  date: string;
   tags: string[];
 }
 

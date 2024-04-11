@@ -18,9 +18,6 @@ import {
 import type { MenuProps, MenuTheme } from 'antd';
 import { Layout, Menu, Switch, theme } from 'antd';
 import { useRouter } from 'next/navigation';
-import Overview from './overview';
-import Administration from './administration';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -41,19 +38,19 @@ function getItem(
 }
 
 const items: MenuItem[] = [
-  getItem('Overview', 'overview', <UserOutlined />, null),
-  getItem('Administration', 'administration', <TeamOutlined />, null),
-  getItem('CRM', 'crm', <SnippetsOutlined />, null),
-  getItem('Map', 'map', <CompassOutlined />, null),
-  getItem('Sales', 'sales', <BarChartOutlined />, null),
-  getItem('Purchasing', 'purchasing', <AccountBookOutlined />, null),
-  getItem('Inventory', 'inventory', <CodeSandboxOutlined />, null),
-  getItem('Product', 'product', <ProductOutlined />, null),
-  getItem('Branches', 'branches', <ShopOutlined />, null),
-  getItem('Project Management', 'pm', <ProjectOutlined />, null),
-  getItem('Membership', 'membership', <MoneyCollectOutlined />, null),
-  getItem('Reports', 'reports', <FormOutlined />, null),
-  getItem('Settings', 'settings', <SettingOutlined />, null),
+  getItem('Overview', 'overview', <UserOutlined />),
+  getItem('Administration', 'administration', <TeamOutlined />),
+  getItem('CRM', 'crm', <SnippetsOutlined />),
+  getItem('Map', 'map', <CompassOutlined />),
+  getItem('Sales', 'sales', <BarChartOutlined />),
+  getItem('Purchasing', 'purchasing', <AccountBookOutlined />),
+  getItem('Inventory', 'inventory', <CodeSandboxOutlined />),
+  getItem('Product', 'product', <ProductOutlined />),
+  getItem('Branches', 'branches', <ShopOutlined />),
+  getItem('Project Management', 'pm', <ProjectOutlined />),
+  getItem('Membership', 'membership', <MoneyCollectOutlined />),
+  getItem('Reports', 'reports', <FormOutlined />),
+  getItem('Settings', 'settings', <SettingOutlined />),
 ];
 
 export function MenuBar() {

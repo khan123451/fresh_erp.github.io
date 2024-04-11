@@ -45,7 +45,7 @@ export default function NewCard() {
     ];
 
     return(<>
-        {!isGRShown && !isMSShown && !isSPShown? <Dropdown menu={{ items }}  style={{width: "100%"}} placement="bottom" arrow>
+        {!isGRShown && !isMSShown && !isSPShown? <Dropdown menu={{ items }} placement="bottom" arrow>
         <Button> + New Card </Button>
         </Dropdown>: ""}
         <br />

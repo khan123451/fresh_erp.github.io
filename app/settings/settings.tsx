@@ -12,7 +12,7 @@ const Settings = () => {
   };
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     // Here you would handle updating the user information
     console.log("Updated user info:", user);

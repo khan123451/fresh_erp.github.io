@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import { Layout, Breadcrumb, Card, Row, Col } from 'antd/lib';
+import { Layout, Breadcrumb, Row, Col, Card } from "antd";
 import AdminChart from './AdminChart';
 
 const { Content } = Layout;
@@ -12,7 +12,7 @@ const Administration = () => {
           <Breadcrumb style={{ margin: '16px 0' }}>
             <Breadcrumb.Item>Home</Breadcrumb.Item>
             <Breadcrumb.Item>Administration</Breadcrumb.Item>
-          </Breadcrumb>
+          </Breadcrumb> 
           <div className="site-layout-content">
             <Row gutter={48}>
               <Col span={48} style={{width:"100%"}}>

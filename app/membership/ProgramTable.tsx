@@ -4,9 +4,9 @@ import type { TableProps } from 'antd';
 
 interface DataType {
   key: string;
-  name: string;
-  age: number;
-  address: string;
+  products: string;
+  totVal: string;
+  date: string;
   tags: string[];
 }
 
@@ -52,7 +52,7 @@ const columns: TableProps<DataType>['columns'] = [
     key: 'action',
     render: (_, record) => (
       <Space size="middle">
-        <a>Edit {record.name}</a>
+        <a>Edit</a>
         <a>Delete</a>
       </Space>
     ),

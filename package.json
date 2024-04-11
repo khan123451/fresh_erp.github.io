@@ -28,7 +28,8 @@
     "react-dom": "^18",
     "react-flow-renderer": "^10.3.17",
     "reactflow": "^11.11.0",
-    "styled-components": "^6.1.8"
+    "styled-components": "^6.1.8",
+    "antd": "^5.16.1"
   },
   "devDependencies": {
     "@types/node": "^20",
