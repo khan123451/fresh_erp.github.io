@@ -32,7 +32,7 @@ const GoogleMapAssist = () => {
     const [selectedStore2, setSelectedStore2] = useState(false);
   
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: 'AIzaSyA58If6U06_aXnV9VFd5guNQKeqE0ugq00'
+    googleMapsApiKey: '%API_KEY%'
   });
 
   if (loadError) {
