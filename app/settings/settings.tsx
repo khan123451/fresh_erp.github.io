@@ -36,16 +36,14 @@ const Settings = () => {
                     </h2>
                     <br />
                     <label>
-                        Name:
-                        <input type="text" name="name" value={user.name} />
+                        Name:{user.name}
                     </label>
                     <br />
                     <label>
-                        Email:
-                        <input type="email" name="email" value={user.email} />
+                        Email:{user.email}
                     </label>
                     <br />
-                    <button type="submit" style={{ padding: "20px", margin: "10px", backgroundColor: "#04AA6D", borderRadius: "20px", color: "white", fontSize: "20px" }}>Update Account</button>
+                    <button type="submit" style={{ padding: "20px", margin: "10px", width: "400px", backgroundColor: "#04AA6D", borderRadius: "20px", color: "white", fontSize: "20px" }}>Update Account</button>
                 </form>
               </div>
             </div>
