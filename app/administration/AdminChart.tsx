@@ -12,15 +12,15 @@ import data from "./data.json";
 const names = ["Kim", "Danny", "John", "Khan", "Korng", "Nat", "JJ", "Johnny", "Mark", "Jack", "Winnie", "Steve", "Wong", "Lee", "Olive"];
 const roles = ["CEO", "CFO", "Product Manager", "Product Manager", "Product Manager", "Marketing Manager", "Store Manager 1", "Store Manager 2", "Teller", "Teller", "Teller", "Teller", "Teller", "Teller"];
 
-function randomIntFromInterval(min, max) { // min and max included 
+function randomIntFromInterval(min: any, max: any) { // min and max included 
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
-const Card = (props) => {
+const Card = (props: any) => {
   const levelColor = "green";
 
   return (
     <ul>
-      {props.data.map((item,index) => (
+      {props.data.map((item: any,index: any) => (
         <Fragment key={item.name}>
           <li>
             <div className="card" style={{textAlign: "center"}}>
