@@ -1,11 +1,12 @@
 'use client'
 import React, { useRef, useState } from 'react';
 import { Layout, Breadcrumb, Card, Row, Col, Statistic, Tabs } from 'antd/lib';
-import { ArrowDownOutlined, ArrowUpOutlined } from '@ant-design/icons';
+import { ArrowDownOutlined, ArrowUpOutlined, PlusOutlined } from '@ant-design/icons';
 import type { ProgressProps, TabsProps } from 'antd';
 import MSLineChart from './MSLineChart';
 import GRLineChart from './GRLineChart';
 import SPChart from './SPChart';
+import NewCard from './NewCard';
 
 const { Content } = Layout;
 type TargetKey = React.MouseEvent | React.KeyboardEvent | string;
@@ -71,7 +72,7 @@ const Overview = () => {
   return (
       <Layout style={{ marginLeft: 220 }}>
         <Tabs
-          style={{ margin: '10px 0 0 10px' }}
+          style={{ margin: '20px 0 0 10px' }}
           type="editable-card"
           onChange={onChange}
           activeKey={activeKey}
@@ -129,6 +130,16 @@ const Overview = () => {
                 </Card>
               </Col>
             </Row>
+            <br />
+            <Row gutter={24}>
+              <Col span={24}>
+                <Card title="Customize Panel" bordered={false}>
+                  <NewCard />
+                </Card>
+              </Col>
+            </Row>
+            <br />
+            <br />
           </div>
           </Content>
       </Layout>

@@ -35,9 +35,8 @@ export default function Home() {
         
         <div className = "login-screen">
           <br />
-          <div style={{marginTop:"50%"}}>
-          <b style={{color:"black", marginLeft: "20px", fontSize:"30px"}}>Fresh</b>
-          <h1 style={{color:"black", marginLeft: "20px", fontSize:"18px"}}>Ready to fresh!</h1>
+          <div style={{marginTop:"10%"}}>
+          <b style={{color:"black", marginLeft: "20px", fontSize:"30px"}}>Ready to Fresh</b>
           <Form
           name="basic"
           labelCol={{ span: 8 }}
@@ -74,7 +73,7 @@ export default function Home() {
 
           <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
             <Button type="primary" htmlType="submit">
-              Submit
+              Login
             </Button>
           </Form.Item>
         </Form>

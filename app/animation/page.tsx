@@ -11,7 +11,7 @@ function AnimationPage() {
   useEffect(() => {
     setTimeout(() => {
         router.push('/overview');
-    }, 4000)
+    }, 3000)
   });
 
     return (

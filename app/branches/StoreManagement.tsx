@@ -16,19 +16,19 @@ const StoreManagement: React.FC = () => (
                 position 01
             </Button>
             <Button type="primary" disabled>
-                position 02
+                Tone Wash
             </Button>
             <Button type="primary" disabled>
-                position 03
+                Facial Cream
             </Button>
         </Flex>
         <br />
         <Flex gap="small">
             <Button type="primary" disabled>
-                position 04
+                09 Lip Stick
             </Button>
             <Button type="primary" disabled>
-                position 05
+                Discount item
             </Button>
             <Button type="primary">
                 position 06

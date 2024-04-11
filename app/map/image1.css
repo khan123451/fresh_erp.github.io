@@ -1,0 +1,9 @@
+.store-image {
+    width: 200px;
+    height: 100px;
+    flex: 1;
+    background: url('./image1.jpg') no-repeat center center;
+    background-size: cover;
+    animation: fade-in 2s;
+    z-index: 1;
+}

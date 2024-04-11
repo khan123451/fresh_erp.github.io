@@ -3,7 +3,11 @@ import { GoogleMap, useLoadScript, Marker, LoadScript, DirectionsService, Direct
 import {
     PushpinOutlined,
   } from '@ant-design/icons';
-import { Button, Flex } from 'antd';
+import { Button, Card } from 'antd/lib';
+import FreshPanel1 from './freshPanel1';
+import FreshPanel2 from './freshPanel2';
+import { Label } from '@mui/icons-material';
+import { Position } from 'reactflow';
 
 const libraries = ['places'];
 const mapContainerStyle = {
@@ -27,6 +31,8 @@ const GoogleMapAssist = () => {
     const [userLocation, setUserLocation] = useState(null);
     const [selectedLoc, setSelectedLoc] = useState(null);
     const [loadings, setLoadings] = useState<boolean[]>([]);
+    const [selectedStore1, setSelectedStore1] = useState(false);
+    const [selectedStore2, setSelectedStore2] = useState(false);
   
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: 'AIzaSyA58If6U06_aXnV9VFd5guNQKeqE0ugq00',
@@ -63,6 +69,14 @@ const GoogleMapAssist = () => {
     });
   };
 
+  const clickEvent = (index: number) => {
+    if (index === 1){
+      setSelectedStore1(true);
+    } else if (index === 2 ) {
+      setSelectedStore2(true);
+    }
+  }
+
   const handleLocChange = event => {
     const selectedLocName = event.target.value;
     const fresh = freshs.find(h => h.name === selectedLocName);
@@ -86,6 +100,7 @@ const GoogleMapAssist = () => {
   };
 
   return (
+    <>
     <div>
         <div>
             <label htmlFor="locSelect">Fresh Store: </label>
@@ -114,20 +129,27 @@ const GoogleMapAssist = () => {
             title = "Your Location"
         />
         {freshs.map((fresh, index) => (
-            <div>
+            <>
                 <Marker
+                key={index}
                 position={fresh.location}
                 title={fresh.name}
                 icon={PushpinOutlined}
+                onClick={()=>index==1?setSelectedStore1(true):setSelectedStore2(true)}
                 label={{
                     text: fresh.name,
                     color: '#000000',
                 }}
                 />
-            </div>
+            </>
           ))}
       </GoogleMap>
+      <div>
+        {selectedStore1? <Card style={{position: "fixed", top:0, zIndex: 100}}><FreshPanel1 /></Card>:""}
+        {selectedStore2? <Card style={{position: "fixed", top:0, zIndex: 100}}><FreshPanel2 /></Card>:""}
+      </div>
     </div>
+    </>
   );
 };
 
